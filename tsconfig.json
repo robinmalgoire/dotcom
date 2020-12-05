@@ -19,7 +19,7 @@
     "jsx": "preserve",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
-    "baseUrl": "."
+    "baseUrl": "src"
   },
   "include": [
     "next-env.d.ts",
