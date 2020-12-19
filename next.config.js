@@ -9,7 +9,7 @@ const withPreact = require('next-plugin-preact')
 const withCSS = require('@zeit/next-css')
 
 module.exports = withPlugins([[withBundleAnalyzer], [withCSS], [withPreact]], {
-  webpack(config, options) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.tsx$/,
       use: [
