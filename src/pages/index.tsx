@@ -8,6 +8,6 @@ const Index: FC<{ ssg: string }> = ({ ssg }) => (
   </div>
 )
 
-export const getStaticProps = () => ({ props: { ssg: 'cloudfront' } })
+export const getStaticProps = () => ({ props: { ssg: 'cloudfront 1' } })
 
 export default Index
