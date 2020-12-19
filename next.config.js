@@ -1,18 +1,14 @@
-const withPlugins = require('next-compose-plugins');
+const withPlugins = require('next-compose-plugins')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-});
+})
 
-const withPreact = require('next-plugin-preact');
+const withPreact = require('next-plugin-preact')
 
-const withCSS = require("@zeit/next-css");
+const withCSS = require('@zeit/next-css')
 
-module.exports = withPlugins([
-  [withBundleAnalyzer],
-  [withCSS],
-  [withPreact]
-], { 
+module.exports = withPlugins([[withBundleAnalyzer], [withCSS], [withPreact]], {
   webpack(config, options) {
     config.module.rules.push({
       test: /\.tsx$/,
@@ -29,4 +25,3 @@ module.exports = withPlugins([
     return config
   },
 })
-
